@@ -12,7 +12,7 @@ import "./app.css";
 
 import { registerLicense } from "@syncfusion/ej2-base";
 
-registerLicense(import.meta.env.VITE_SYNC_FUSION_LICENSE_KEY);
+registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY);
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
