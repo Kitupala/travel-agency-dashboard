@@ -1,8 +1,10 @@
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import { sidebarItems } from "~/constants";
 import { cn } from "~/lib/utils";
+import { logoutUser } from "~/appwrite/auth";
 
 const NavItems = ({ handleClick }: { handleClick?: () => void }) => {
+  const navigate = useNavigate();
   const user = {
     name: "Kitupala",
     email: "furious@gmail.com",
@@ -53,8 +55,11 @@ const NavItems = ({ handleClick }: { handleClick?: () => void }) => {
             <p>{user?.email}</p>
           </article>
           <button
-            onClick={() => {
-              console.log("logout");
+            onClick={async () => {
+              const success = await logoutUser();
+              if (success) {
+                navigate("/sign-in");
+              }
             }}
             className="cursor-pointer"
           >

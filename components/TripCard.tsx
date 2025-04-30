@@ -25,7 +25,8 @@ const TripCard = ({
       }
       className="trip-card"
     >
-      <img src={imageUrl} alt={name} className="w-full h-full" />
+      <img src={imageUrl} alt={name} />
+
       <article>
         <h2>{name}</h2>
         <figure>

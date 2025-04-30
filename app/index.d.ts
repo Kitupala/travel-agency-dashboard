@@ -1,3 +1,12 @@
+declare interface AppwriteConfig {
+  endpointUrl: string;
+  projectId: string;
+  apiKey: string;
+  databaseId: string;
+  userCollectionId: string;
+  tripCollectionId: string;
+}
+
 declare interface BaseUser {
   id: string;
   name: string;
