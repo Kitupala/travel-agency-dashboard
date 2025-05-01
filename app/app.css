@@ -409,7 +409,6 @@
   .p-40-semibold {
     @apply text-3xl md:text-[40px] md:leading-[44px] font-semibold;
   }
-
   .p-30-bold {
     @apply text-2xl md:text-3xl font-bold;
   }
