@@ -496,6 +496,11 @@ body {
   border-radius: 12px 12px 0 0 !important;
 }
 
+.e-headercelldiv {
+  text-transform: uppercase !important;
+  color: #7F7E83 !important;
+}
+
 .e-grid .e-row:nth-child(odd) {
   background-color: #f9fbfc;
 }
