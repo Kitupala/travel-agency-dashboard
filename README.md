@@ -1,8 +1,7 @@
-# Welcome to React Router!
+# Welcome to Travel Agency Dashboard!
 
-A modern, production-ready template for building full-stack React applications using React Router.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+App called Tourvisto uses Google Generative AI for creating tailored travel itineraries based on user-provided preferences. Integrated Unsplash for fetching trip-related images and implemented data storage using Appwrite. App is in progress...
 
 ## Features
 
