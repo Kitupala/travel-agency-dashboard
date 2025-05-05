@@ -7,7 +7,6 @@ import {
 import { cn, formatDate } from "~/lib/utils";
 import { getAllUsers } from "~/appwrite/auth";
 import type { Route } from "./+types/all-users";
-import dayjs from "dayjs";
 
 export const loader = async () => {
   const { users, total } = await getAllUsers(10, 0);

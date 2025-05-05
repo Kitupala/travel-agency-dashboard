@@ -12,6 +12,7 @@ import React, { useState } from "react";
 import { world_map } from "~/constants/world_map";
 import { ButtonComponent } from "@syncfusion/ej2-react-buttons";
 import { account } from "~/appwrite/client";
+import { useNavigate } from "react-router";
 
 export const loader = async () => {
   try {
@@ -34,6 +35,7 @@ export const loader = async () => {
 };
 
 const CreateTrip = ({ loaderData }: Route.ComponentProps) => {
+  const navigate = useNavigate();
   const countries = loaderData as Country[];
 
   const [formData, setFormData] = useState<TripFormData>({
@@ -44,6 +46,7 @@ const CreateTrip = ({ loaderData }: Route.ComponentProps) => {
     duration: 0,
     groupType: "",
   });
+
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -69,21 +72,29 @@ const CreateTrip = ({ loaderData }: Route.ComponentProps) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    const {
+      country,
+      travelStyle,
+      interest: interests,
+      budget,
+      duration: numberOfDays,
+      groupType,
+    } = formData;
 
     if (
-      !formData.country ||
-      !formData.duration ||
-      !formData.groupType ||
-      !formData.travelStyle ||
-      !formData.interest ||
-      !formData.budget
+      !country ||
+      !numberOfDays ||
+      !groupType ||
+      !travelStyle ||
+      !interests ||
+      !budget
     ) {
       setError("Please fill in all fields");
       setLoading(false);
       return;
     }
 
-    if (formData.duration < 1 || formData.duration > 10) {
+    if (numberOfDays < 1 || numberOfDays > 10) {
       setError("Trip duration must be between 1 and 10 days");
       setLoading(false);
       return;
@@ -97,8 +108,25 @@ const CreateTrip = ({ loaderData }: Route.ComponentProps) => {
     }
 
     try {
-      console.log("user ID:", user);
-      console.log("formData:", formData);
+      const response = await fetch("/api/create-trip", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          country,
+          numberOfDays,
+          travelStyle,
+          interests,
+          budget,
+          groupType,
+          userId: user.$id,
+        }),
+      });
+
+      const result: CreateTripResponse = await response.json();
+      if (result?.id) navigate(`/trips/${result.id}`);
+      else console.error("Failed to generate a trip");
     } catch (error) {
       console.error("Error generating trip", error);
     } finally {
