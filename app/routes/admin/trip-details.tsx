@@ -45,7 +45,6 @@ const TripDetails = ({ loaderData }: Route.ComponentProps) => {
     groupType,
     bestTimeToVisit,
     weatherInfo,
-    location,
     itinerary,
   } = tripData || {};
 
