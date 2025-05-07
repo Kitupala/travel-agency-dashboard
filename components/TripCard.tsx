@@ -19,10 +19,15 @@ const TripCard = ({
   return (
     <Link
       to={
-        path.pathname === "/" || path.pathname.startsWith("/travel")
-          ? `travel/${id}`
+        path.pathname === "/dashboard" || path.pathname.startsWith("/trips")
+          ? `/trips/${id}`
           : `trips/${id}`
       }
+      // to={
+      //   path.pathname === "/" || path.pathname.startsWith("/travel")
+      //     ? `travel/${id}`
+      //     : `trips/${id}`
+      // }
       className="trip-card"
     >
       <img src={imageUrl} alt={name} />
