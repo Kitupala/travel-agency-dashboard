@@ -22,45 +22,6 @@ export const sidebarItems = [
   },
 ];
 
-export const chartOneData: object[] = [
-  {
-    x: "Jan",
-    y1: 0.5,
-    y2: 1.5,
-    y3: 0.7,
-  },
-  {
-    x: "Feb",
-    y1: 0.8,
-    y2: 1.2,
-    y3: 0.9,
-  },
-  {
-    x: "Mar",
-    y1: 1.2,
-    y2: 1.8,
-    y3: 1.5,
-  },
-  {
-    x: "Apr",
-    y1: 1.5,
-    y2: 2.0,
-    y3: 1.8,
-  },
-  {
-    x: "May",
-    y1: 1.8,
-    y2: 2.5,
-    y3: 2.0,
-  },
-  {
-    x: "Jun",
-    y1: 2.0,
-    y2: 2.8,
-    y3: 2.5,
-  },
-];
-
 export const travelStyles = [
   "Relaxed",
   "Luxury",
@@ -143,24 +104,6 @@ export const RIGHT_CONFETTI = {
 };
 
 // DUMMY DATA
-export const user = { name: "Kitupala" };
-export const dashboardStats: DashboardStats = {
-  totalUsers: 12450,
-  usersJoined: {
-    currentMonth: 218,
-    lastMonth: 176,
-  },
-  userRole: {
-    total: 62,
-    currentMonth: 25,
-    lastMonth: 15,
-  },
-  totalTrips: 1320,
-  tripsCreated: {
-    currentMonth: 256,
-    lastMonth: 376,
-  },
-};
 export const allTrips = [
   {
     id: 1,
@@ -199,32 +142,48 @@ export const allTrips = [
     estimatedPrice: "$4,000",
   },
 ];
-export const users = [
+
+export const gridImages = [
   {
-    id: 1,
-    name: "John Doe",
-    email: "john.doe@example.com",
-    imageUrl: "/assets/images/david.webp",
-    dateJoined: formatDate("2025-01-01"),
-    itineraryCreated: 10,
-    status: "user",
+    id: "card-img-1",
+    src: "/assets/images/card-img-1.png",
+    title: "Rialto Bridge in Venice",
+    gridArea: "span 3 / span 6",
+    type: "large",
   },
   {
-    id: 2,
-    name: "Jane Smith",
-    email: "jane.smith@example.com",
-    imageUrl: "/assets/images/david.webp",
-    dateJoined: formatDate("2025-01-02"),
-    itineraryCreated: 4,
-    status: "user",
+    id: "card-img-2",
+    src: "/assets/images/card-img-2.png",
+    title: "Tower Bridge in London",
+    gridArea: "span 2 / span 2",
+    type: "small",
   },
   {
-    id: 3,
-    name: "John Smith",
-    email: "john.smith@example.com",
-    imageUrl: "/assets/images/david.webp",
-    dateJoined: formatDate("2025-01-03"),
-    itineraryCreated: 8,
-    status: "admin",
+    id: "card-img-3",
+    src: "/assets/images/card-img-3.png",
+    title: "Temple of Poseidon in Greece",
+    gridArea: "span 2 / span 2",
+    type: "small",
+  },
+  {
+    id: "card-img-4",
+    src: "/assets/images/card-img-4.png",
+    title: "Venice Grand Canal",
+    gridArea: "span 3 / span 3",
+    type: "medium",
+  },
+  {
+    id: "card-img-5",
+    src: "/assets/images/card-img-5.png",
+    title: "Vernazza in Cinque Terre",
+    gridArea: "span 3 / span 3",
+    type: "medium",
+  },
+  {
+    id: "card-img-6",
+    src: "/assets/images/card-img-6.png",
+    title: "Bangkok Grand Palace",
+    gridArea: "span 2 / span 2",
+    type: "small",
   },
 ];

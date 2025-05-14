@@ -3,19 +3,26 @@ import { cn } from "~/lib/utils";
 import { ButtonComponent } from "@syncfusion/ej2-react-buttons";
 
 interface HeaderProps {
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   title: string;
   description: string;
   ctaText?: string;
   ctaUrl?: string;
 }
 
-const Header = ({ title, description, ctaText, ctaUrl }: HeaderProps) => {
+const Header = ({
+  as: Comp = "h1",
+  title,
+  description,
+  ctaText,
+  ctaUrl,
+}: HeaderProps) => {
   const location = useLocation();
 
   return (
     <header className="header">
       <article>
-        <h1
+        <Comp
           className={cn(
             "text-dark-100",
             location.pathname === "/"
@@ -24,7 +31,7 @@ const Header = ({ title, description, ctaText, ctaUrl }: HeaderProps) => {
           )}
         >
           {title}
-        </h1>
+        </Comp>
         <p
           className={cn(
             "text-gray-100 font-normal",

@@ -139,17 +139,26 @@
     }
   }
 
-  .travel-hero {
-    @apply bg-hero bg-origin-content bg-cover;
-
+  .pay-form {
+    @apply flex flex-col gap-6 py-6 bg-white rounded-xl;
     div {
-      @apply flex flex-col bg-linear100 bg-cover;
+      @apply w-full flex flex-col gap-2.5 relative;
+    }
+    label {
+      @apply text-sm font-normal text-gray-100;
+    }
+  }
+
+  .travel-hero {
+    @apply bg-hero bg-origin-content bg-no-repeat absolute z-0 top-0 left-0 object-fill w-screen h-screen;
+    div {
+      @apply flex flex-col bg-linear100;
 
       section {
-        @apply py-48 justify-center items-start flex flex-col gap-6;
+        @apply py-72 justify-center items-start flex flex-col gap-6;
 
         article {
-          @apply flex flex-col w-full md:max-w-[520px] gap-3.5;
+          @apply flex flex-col w-full md:max-w-[650px] gap-3.5;
           p {
             @apply text-lg font-normal text-dark-400;
           }
@@ -158,7 +167,7 @@
     }
   }
   .travel-featured {
-    @apply flex flex-col lg:flex-row gap-[30px] h-2/3 lg:h-1/2;
+    @apply flex flex-col lg:flex-col gap-[30px] h-2/3 lg:h-1/2;
   }
 
   .travel-detail {
@@ -169,7 +178,7 @@
     }
 
     .back-link {
-      @apply flex items-center justify-center gap-2.5 py-3 px-[30px] border-gray-200 rounded-lg shadow-500 bg-white h-[50px] w-[240px];
+      @apply flex items-center justify-center gap-2.5 py-3 px-[30px] border-gray-200 rounded-lg shadow-500 bg-white h-[50px] w-[150px];
 
       img {
         @apply size-[17px];
@@ -370,7 +379,7 @@
   }
 
   .dashboard {
-    @apply flex flex-col gap-10 w-full  pb-20;
+    @apply flex flex-col gap-10 w-full pb-20;
 
     .container {
       @apply flex flex-col gap-5 mt-2.5;
@@ -437,16 +446,22 @@
     @apply text-sm md:text-base font-semibold;
   }
   .button-class {
-    @apply !bg-primary-100 !px-4 !rounded-lg !flex !items-center !justify-center !gap-1.5 !shadow-none;
+    @apply !bg-primary-100 px-4 !rounded-lg !flex !items-center !justify-center !gap-1.5 !shadow-none;
   }
   .button-class-secondary {
     @apply !bg-white !px-4 !rounded-lg !flex !items-center !justify-center !gap-1.5 !shadow-sm;
+  }
+  .button-class-secondary-black {
+    @apply !bg-black !px-4 !rounded-lg !flex !items-center !justify-center !gap-1.5 !shadow-sm;
   }
   .form-label {
     @apply text-sm font-normal text-gray-100;
   }
   .form-input {
     @apply p-3.5 border border-light-400 rounded-xl text-base text-dark-300 font-normal;
+  }
+  .pay-form-input {
+    @apply p-3.5 border border-slate-300 rounded-xl text-base text-dark-300 font-normal;
   }
   .comboBox-popup {
     @apply absolute z-10 top-24 bg-white border border-gray-200 rounded-xl shadow-200 h-[250px] w-full md:max-w-[660px] overflow-hidden;
