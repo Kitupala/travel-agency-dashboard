@@ -1,85 +1,40 @@
-# Welcome to Travel Agency Dashboard!
+# Tourvisto - Travel Planning Platform
 
+## Introduction
 
-App called Tourvisto uses Google Generative AI for creating tailored travel itineraries based on user-provided preferences. Integrated Unsplash for fetching trip-related images and implemented data storage using Appwrite. App is in progress...
+Tourvisto is a modern travel planning platform that leverages artificial intelligence to create personalized travel itineraries based on user preferences. The application allows travelers to discover destinations, explore curated trips, and book their dream vacations with ease. With a user-friendly interface and powerful admin dashboard, Tourvisto streamlines the entire travel planning process from discovery to booking.
+
+Tourvisto combines the power of Google's Generative AI for creating tailored travel itineraries, Unsplash for beautiful destination imagery, and Appwrite for secure and scalable backend services. Whether you're a traveler looking for your next adventure or an administrator managing travel offerings, Tourvisto provides a seamless experience.
+
+## Tech Stack
+
+### Frontend
+- [React](https://react.dev/) (v19) - A JavaScript library for building user interfaces
+- [React Router](https://reactrouter.com/) (v7) - Declarative routing for React applications
+- [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript for better developer experience
+- [TailwindCSS](https://tailwindcss.com/) (v4) - Utility-first CSS framework
+- [Syncfusion Components](https://www.syncfusion.com/react-components) - UI components for grids, charts, maps, and more
+
+### Backend & Services
+- [Appwrite](https://appwrite.io/) - Open-source backend server for authentication and database
+- [Google Generative AI](https://ai.google.dev/) - AI models for generating travel itineraries
+- [Unsplash](https://unsplash.com/) - High-quality images for travel destinations
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+### User Features
+- **Personalized Travel Itineraries** - AI-generated travel plans based on user preferences
+- **Destination Discovery** - Browse featured travel destinations with rich imagery
+- **Trip Details** - View comprehensive information about each trip including itinerary, pricing, and more
+- **User Authentication** - Secure sign-in functionality for personalized experiences
+- **Payment Processing** - Seamless booking and payment through Stripe integration
+    *  *Note: UI implemented. Real transactions are not processed.*
 
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+### Admin Features
+- **Dashboard Analytics** - Comprehensive overview of platform performance
+- **User Management** - View user accounts
+- **Trip Management** - Create, edit, and delete trip offerings
+- **Trip Creation** - Intuitive interface for creating new travel packages
 
 ---
 
