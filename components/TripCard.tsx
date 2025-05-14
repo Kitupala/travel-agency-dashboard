@@ -21,13 +21,8 @@ const TripCard = ({
       to={
         path.pathname === "/dashboard" || path.pathname.startsWith("/trips")
           ? `/trips/${id}`
-          : `trips/${id}`
+          : `travel/${id}`
       }
-      // to={
-      //   path.pathname === "/" || path.pathname.startsWith("/travel")
-      //     ? `travel/${id}`
-      //     : `trips/${id}`
-      // }
       className="trip-card"
     >
       <img src={imageUrl} alt={name} />

@@ -31,12 +31,11 @@ const SignIn = () => {
 
           <article>
             <h2 className="p-28-semibold text-dark-100 text-center">
-              {/*Start Your Travel Journey*/}
-              Admin Dashboard Login
+              Start Your Travel Journey
             </h2>
             <p className="p-18-regular text-gray-100 text-center !leading-7">
-              Sign in with Google to manage destinations, itineraries, and user
-              activity with ease.
+              Sign in with Google to explore AI-generated itineraries, trending
+              destinations, and much more.
             </p>
           </article>
 
