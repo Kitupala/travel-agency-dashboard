@@ -56,7 +56,6 @@ const TravelPage = ({ loaderData }: Route.ComponentProps) => {
                 destination, set your preferences, and explore with confidence.
               </p>
             </article>
-            ≠
             <ButtonComponent
               type="button"
               className="button-class !h-14 !px-14"
