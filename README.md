@@ -1,4 +1,9 @@
-# Tourvisto - Travel Planning Platform
+# Tourvisto
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c795364e-837f-436d-82f9-93695ba75478" alt="travelagencydashboard">
+</p>
+
 
 ## Introduction
 
